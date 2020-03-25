@@ -28,7 +28,7 @@ public class ScoresResource {
     @Consumes("application/json")
     public Response create(Score score) {
         score.persist();
-        // add bus to publish new score and top ten
+        // add bus to publish new score and top ten after adding websockets dependency
         // bus.publish("newscore", score.toString()); // tell NotifcationsWebSocket to broadcast an update
         // bus.publish("topten", topTenList().toString()); // tell NotifcationsWebSocket to broadcast an update
          return Response.status(201).build();
