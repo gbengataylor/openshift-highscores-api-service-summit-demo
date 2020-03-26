@@ -10,7 +10,7 @@ import io.quarkus.runtime.StartupEvent;
 @ApplicationScoped
 public class DataPreloadService {
 
-    @ConfigProperty(name = "load.db", defaultValue = "false")
+    @ConfigProperty(name = "preload.db", defaultValue = "false")
     public boolean loadDb;
     
     void onStart(@Observes StartupEvent ev) {
