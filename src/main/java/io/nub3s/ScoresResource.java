@@ -1,5 +1,7 @@
 package io.nub3s;
 
+//import javax.inject.Inject;
+
 // import io.vertx.axle.core.eventbus.EventBus;
 // import io.vertx.axle.core.eventbus.Message;
 
@@ -10,6 +12,7 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
+
 import java.util.List;
 
 @Path("/scores")
@@ -49,5 +52,4 @@ public class ScoresResource {
     public List<Score> topTenList(){
         return Score.findTopTen();
     }*/
-
 }
