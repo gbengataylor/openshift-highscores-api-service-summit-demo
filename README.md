@@ -17,6 +17,9 @@ Start a local mongoDB server with:
 Run the api service in dev mode that enables live coding using:
 >`./mvnw quarkus:dev`
 
+If you want to generate random data on startup locally, modify application.properties
+> `%dev.load.db=true`
+
 ### Packaging and running the application as a jar
 The application is packageable using `./mvnw package`. It produces the executable `highscores-api-service-1.0.0-SNAPSHOT-runner.jar` file in `/target` directory. Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/lib` directory.
 
