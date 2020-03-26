@@ -11,7 +11,7 @@ import io.quarkus.runtime.StartupEvent;
 public class DataPreloadService {
 
     @ConfigProperty(name = "preload.db", defaultValue = "false")
-    public boolean loadDb;
+    protected boolean loadDb;
     
     void onStart(@Observes StartupEvent ev) {
         if (loadDb) {
