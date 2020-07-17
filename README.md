@@ -67,10 +67,6 @@ Expose access to outside of cluster
 Build things (I gave it 6GB RAM but you might be able to get away with less):
 >`oc new-app quay.io/quarkus/ubi-quarkus-native-s2i:19.3.1-java8~https://github.com/gbengataylor/openshift-highscores-api-service-summit-demo.git --name=highscores-api-service`
 >
-> '#jdk' 
->
-> `#oc new-app registry.access.redhat.com/redhat-openjdk-18/openjdk18-openshift~https://github.com/gbengataylor/openshift-highscores-api-service-summit-demo.git --name=highscores-api-service`
->
 >`oc patch bc/highscores-api-service -p '{"spec":{"resources":{"limits":{"cpu":"2", "memory":"6Gi"}}}}'`
 >
 >`oc start-build highscores-api-service`
